@@ -1,9 +1,10 @@
-extends Area2D
+extends Control
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,8 +16,6 @@ func _ready():
 #	pass
 
 
-func _on_HurtBox_area_entered(area):
-	print("area entered")
-	print(global_position)
-	get_tree().change_scene("res://PopUpMenu.tscn")
-
+func _on_Button_pressed():
+	pass # Replace with function body.
+	get_tree().change_scene("res://World.tscn")
