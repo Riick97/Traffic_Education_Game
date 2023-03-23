@@ -47,7 +47,6 @@ text = "Choose the correct option: "
 align = 1
 valign = 1
 uppercase = true
-percent_visible = -0.0434783
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
 margin_top = 196.0
