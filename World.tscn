@@ -410,7 +410,6 @@ margin_right = 1840.0
 margin_bottom = 993.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="ControlPanel" parent="CanvasLayer" instance=ExtResource( 4 )]
 player_path = NodePath("../../Car")

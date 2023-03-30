@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://PopUpMenu.gd" type="Script" id=1]
 [ext_resource path="res://map images/istockphoto-1095421732-612x612.jpg" type="Texture" id=2]
 [ext_resource path="res://map images/intersection-icon-white-background-linked-road-sign-symbol-flat-style-197194590.jpg" type="Texture" id=3]
 [ext_resource path="res://Button.gd" type="Script" id=4]
+[ext_resource path="res://assets/spritesheet_vehicles.png" type="Texture" id=5]
+[ext_resource path="res://download.jpeg" type="Texture" id=6]
+[ext_resource path="res://traffic sign images/pure-white-background-85a2a7fd.jpg" type="Texture" id=7]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -15,68 +18,112 @@ margin_right = 1031.0
 margin_bottom = 607.0
 texture = ExtResource( 2 )
 
+[node name="Pure-white-background-85A2A7Fd" type="Sprite" parent="."]
+position = Vector2( 866, 301 )
+scale = Vector2( 0.203333, 0.766667 )
+texture = ExtResource( 7 )
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 0.773
 anchor_top = 0.641
 anchor_right = 0.844
 anchor_bottom = 0.648
-margin_left = -767.552
+margin_left = -751.552
 margin_top = -348.6
-margin_right = 135.744
+margin_right = 116.744
 margin_bottom = 168.2
 alignment = 2
 
-[node name="NinePatchRect" type="NinePatchRect" parent="HBoxContainer"]
-margin_left = 765.0
-margin_right = 765.0
-margin_bottom = 521.0
+[node name="Intersection-icon-white-background-linked-road-sign-symbol-flat-style-197194590" type="Sprite" parent="HBoxContainer"]
+position = Vector2( 306, 265 )
+scale = Vector2( 0.321, 0.298 )
 texture = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 769.0
-margin_right = 976.0
+margin_left = 718.0
+margin_right = 941.0
 margin_bottom = 521.0
 alignment = 1
 
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+margin_top = 49.0
+margin_right = 223.0
+margin_bottom = 250.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "YOU ARE HERE: 
+
+What do you have to do 
+at this traffic sign??
+
+
+
+1.  You have preference
+2.  You have to give preference
+3.  Stop at this sign
+4.  Go full speed ahead
+"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 254.0
+margin_right = 223.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 0, 50 )
+
 [node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
 modulate = Color( 0, 0, 0, 1 )
-margin_top = 178.0
-margin_right = 207.0
-margin_bottom = 192.0
+margin_top = 308.0
+margin_right = 223.0
+margin_bottom = 322.0
 text = "Choose the correct option: "
 align = 1
 valign = 1
 uppercase = true
 
 [node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 196.0
-margin_right = 207.0
-margin_bottom = 246.0
+margin_top = 326.0
+margin_right = 223.0
+margin_bottom = 376.0
 rect_min_size = Vector2( 0, 50 )
 
 [node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 250.0
-margin_right = 207.0
-margin_bottom = 270.0
+margin_top = 380.0
+margin_right = 223.0
+margin_bottom = 400.0
 text = "Option 1"
 script = ExtResource( 4 )
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 274.0
-margin_right = 207.0
-margin_bottom = 294.0
+margin_top = 404.0
+margin_right = 223.0
+margin_bottom = 424.0
 text = "Option 2"
 
 [node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 298.0
-margin_right = 207.0
-margin_bottom = 318.0
+margin_top = 428.0
+margin_right = 223.0
+margin_bottom = 448.0
 text = "Option 3"
 
 [node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 322.0
-margin_right = 207.0
-margin_bottom = 342.0
+margin_top = 452.0
+margin_right = 223.0
+margin_bottom = 472.0
 text = "Option 4"
+
+[node name="Sprite" type="Sprite" parent="HBoxContainer/VBoxContainer"]
+show_behind_parent = true
+position = Vector2( -376, 388 )
+scale = Vector2( 0.65, 0.701 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 434, 133, 70, 131 )
+
+[node name="Download" type="Sprite" parent="HBoxContainer/VBoxContainer/Sprite"]
+position = Vector2( 75.3846, -91.2981 )
+scale = Vector2( 1.53846, 1.42653 )
+texture = ExtResource( 6 )
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
