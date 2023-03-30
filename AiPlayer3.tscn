@@ -1,28 +1,25 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/spritesheet_vehicles.png" type="Texture" id=1]
-[ext_resource path="res://AiPlayer.gd" type="Script" id=2]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( -33.9028, 52.9732, 33.9028, -52.9732, -389, -255, 0, 0, 0, 0, -245, -304, 0, 0, 0, 0, 228, -308, -64.6272, -74.5992, 64.6272, 74.5992, 353, -262, 0, 0, 0, 0, 401, -171, 0, 0, 0, 0, 408, 160, 76.2814, -30.9856, -76.2814, 30.9856, 335, 264, 0, 0, 0, 0, 241, 292, 109.125, 47.6758, -109.125, -47.6758, -361, 253, -81.5787, 60.0871, 81.5787, -60.0871, -387, -251 )
+"points": PoolVector2Array( 0, 0, 0, 0, 1669, -1722, 0, 0, 0, 0, -327, -1716, 0, 0, 0, 0, -333, -1500, 0, 0, 0, 0, 1447, -1500, 0, 0, 0, 0, 1435, -960, 0, 0, 0, 0, -345, -943, 0, 0, 0, 0, -347, 3040, 0, 0, 0, 0, -127, 3040, 0, 0, 0, 0, -131, 1812, 0, 0, 0, 0, 886, 1815, 0, 0, 0, 0, 894, 1071, 0, 0, 0, 0, 896, -753, 0, 0, 0, 0, 1662, -766, 0, 0, 0, 0, 1669, -1725 )
 }
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 33.5763
 height = 69.743
 
-[node name="AiPlayer" type="KinematicBody2D"]
-collision_layer = 2
-script = ExtResource( 2 )
+[node name="AiPlayer3" type="KinematicBody2D"]
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 4, 1 )
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( -389, -255 )
-rotation = -0.968385
+position = Vector2( 1289.35, -1720.86 )
+rotation = 3.13852
+offset = 378.17
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="Path2D/PathFollow2D"]
 
