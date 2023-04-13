@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://PopUpMenu.gd" type="Script" id=1]
 [ext_resource path="res://map images/istockphoto-1095421732-612x612.jpg" type="Texture" id=2]
 [ext_resource path="res://map images/intersection-icon-white-background-linked-road-sign-symbol-flat-style-197194590.jpg" type="Texture" id=3]
-[ext_resource path="res://Button.gd" type="Script" id=4]
 [ext_resource path="res://assets/spritesheet_vehicles.png" type="Texture" id=5]
 [ext_resource path="res://download.jpeg" type="Texture" id=6]
 [ext_resource path="res://traffic sign images/pure-white-background-85a2a7fd.jpg" type="Texture" id=7]
@@ -93,7 +92,6 @@ margin_top = 380.0
 margin_right = 223.0
 margin_bottom = 400.0
 text = "Option 1"
-script = ExtResource( 4 )
 
 [node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
 margin_top = 404.0
@@ -127,3 +125,6 @@ scale = Vector2( 1.53846, 1.42653 )
 texture = ExtResource( 6 )
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]

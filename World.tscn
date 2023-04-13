@@ -432,17 +432,12 @@ position = Vector2( 1815, 459 )
 [node name="Path2D" parent="AiPlayer2" index="0"]
 position = Vector2( -92, -156 )
 
-[node name="PathFollow2D" parent="AiPlayer2/Path2D" index="0"]
-position = Vector2( 271, -1681 )
-rotation = 1.5639
-
 [node name="AiPlayer3" parent="." instance=ExtResource( 20 )]
 position = Vector2( 556, -620 )
 script = ExtResource( 21 )
 
 [node name="PathFollow2D" parent="AiPlayer3/Path2D" index="0"]
 position = Vector2( 1289.35, -1720.86 )
-rotation = 3.13852
 
 [editable path="AiPlayer"]
 [editable path="AiPlayer2"]
