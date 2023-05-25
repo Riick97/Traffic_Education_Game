@@ -6,11 +6,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	connect("pressed", self, "_on_Button_pressed")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
 
 func _on_Button_pressed():
 	print ("incorrect answer")
@@ -18,6 +16,7 @@ func _on_Button_pressed():
 
 func _on_Button2_pressed():
 	print ("correct answer")
+	Global.increase_value_in_scene_b()
 	get_tree().change_scene("res://World.tscn")
 
 func _on_Button3_pressed():

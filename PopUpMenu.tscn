@@ -12,42 +12,51 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_right = 1031.0
-margin_bottom = 607.0
+[node name="PopupDialog" type="PopupDialog" parent="."]
+visible = true
+margin_left = 758.0
+margin_top = 440.0
+margin_right = 798.0
+margin_bottom = 480.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="PopupDialog"]
+margin_left = -758.0
+margin_top = -440.0
+margin_right = 273.0
+margin_bottom = 167.0
 texture = ExtResource( 2 )
 
-[node name="Pure-white-background-85A2A7Fd" type="Sprite" parent="."]
-position = Vector2( 866, 301 )
+[node name="Pure-white-background-85A2A7Fd" type="Sprite" parent="PopupDialog"]
+position = Vector2( 108, -139 )
 scale = Vector2( 0.203333, 0.766667 )
 texture = ExtResource( 7 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupDialog"]
 anchor_left = 0.773
 anchor_top = 0.641
 anchor_right = 0.844
 anchor_bottom = 0.648
-margin_left = -751.552
-margin_top = -348.6
-margin_right = 116.744
-margin_bottom = 168.2
+margin_left = -748.92
+margin_top = -429.64
+margin_right = 119.376
+margin_bottom = 87.16
 alignment = 2
 
-[node name="Intersection-icon-white-background-linked-road-sign-symbol-flat-style-197194590" type="Sprite" parent="HBoxContainer"]
+[node name="Intersection-icon-white-background-linked-road-sign-symbol-flat-style-197194590" type="Sprite" parent="PopupDialog/HBoxContainer"]
 position = Vector2( 306, 265 )
 scale = Vector2( 0.321, 0.298 )
 texture = ExtResource( 3 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 718.0
-margin_right = 941.0
-margin_bottom = 521.0
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupDialog/HBoxContainer"]
+margin_left = 648.0
+margin_right = 871.0
+margin_bottom = 517.0
 alignment = 1
 
-[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
-margin_top = 49.0
+[node name="Label2" type="Label" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 47.0
 margin_right = 223.0
-margin_bottom = 250.0
+margin_bottom = 248.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "YOU ARE HERE: 
 
@@ -65,53 +74,53 @@ align = 1
 valign = 1
 uppercase = true
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 254.0
+[node name="MarginContainer2" type="MarginContainer" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 252.0
 margin_right = 223.0
-margin_bottom = 304.0
+margin_bottom = 302.0
 rect_min_size = Vector2( 0, 50 )
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PopupDialog/HBoxContainer/VBoxContainer"]
 modulate = Color( 0, 0, 0, 1 )
-margin_top = 308.0
+margin_top = 306.0
 margin_right = 223.0
-margin_bottom = 322.0
+margin_bottom = 320.0
 text = "Choose the correct option: "
 align = 1
 valign = 1
 uppercase = true
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
-margin_top = 326.0
+[node name="MarginContainer" type="MarginContainer" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 324.0
 margin_right = 223.0
-margin_bottom = 376.0
+margin_bottom = 374.0
 rect_min_size = Vector2( 0, 50 )
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 380.0
+[node name="Button" type="Button" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 378.0
 margin_right = 223.0
-margin_bottom = 400.0
+margin_bottom = 398.0
 text = "Option 1"
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 404.0
+[node name="Button2" type="Button" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 402.0
 margin_right = 223.0
-margin_bottom = 424.0
+margin_bottom = 422.0
 text = "Option 2"
 
-[node name="Button3" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 428.0
+[node name="Button3" type="Button" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 426.0
 margin_right = 223.0
-margin_bottom = 448.0
+margin_bottom = 446.0
 text = "Option 3"
 
-[node name="Button4" type="Button" parent="HBoxContainer/VBoxContainer"]
-margin_top = 452.0
+[node name="Button4" type="Button" parent="PopupDialog/HBoxContainer/VBoxContainer"]
+margin_top = 450.0
 margin_right = 223.0
-margin_bottom = 472.0
+margin_bottom = 470.0
 text = "Option 4"
 
-[node name="Sprite" type="Sprite" parent="HBoxContainer/VBoxContainer"]
+[node name="Sprite" type="Sprite" parent="PopupDialog/HBoxContainer/VBoxContainer"]
 show_behind_parent = true
 position = Vector2( -376, 388 )
 scale = Vector2( 0.65, 0.701 )
@@ -119,12 +128,12 @@ texture = ExtResource( 5 )
 region_enabled = true
 region_rect = Rect2( 434, 133, 70, 131 )
 
-[node name="Download" type="Sprite" parent="HBoxContainer/VBoxContainer/Sprite"]
+[node name="Download" type="Sprite" parent="PopupDialog/HBoxContainer/VBoxContainer/Sprite"]
 position = Vector2( 75.3846, -91.2981 )
 scale = Vector2( 1.53846, 1.42653 )
 texture = ExtResource( 6 )
 
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="PopupDialog/HBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="PopupDialog/HBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="PopupDialog/HBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="PopupDialog/HBoxContainer/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]

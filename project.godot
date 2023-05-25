@@ -18,6 +18,10 @@ config/name="car_steering"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [input]
 
 steer_left={
